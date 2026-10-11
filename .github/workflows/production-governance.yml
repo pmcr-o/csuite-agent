@@ -1,0 +1,24 @@
+name: production-governance
+
+on:
+  pull_request:
+    paths:
+      - '.pmcro/protocol/participant-governance.json'
+      - '.pmcro/protocol/data-rights.json'
+      - '.pmcro/protocol/private-runtime-boundary.json'
+      - 'eng/verify-production-governance.py'
+      - '.github/workflows/production-governance.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python eng/verify-production-governance.py
