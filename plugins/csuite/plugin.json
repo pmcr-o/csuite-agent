@@ -1,0 +1,8 @@
+{
+  "name": "csuite",
+  "version": "1.0.0",
+  "description": "C-suite domain-orchestrator marketplace with bounded specialized executive child agents.",
+  "skills": [
+    "./skills/"
+  ]
+}
