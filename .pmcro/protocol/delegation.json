@@ -1,0 +1,60 @@
+{
+  "schema": "pmcro.delegation/v3",
+  "metaOrchestrator": "csuite-agent",
+  "rule": "Executive child agents and the csuite-agent orchestrate intent. External execution is delegated only to registered domain orchestrators. Missing capability routes to skill-creator-agent; unresolved authority HALTs without a clarification question.",
+  "domainRegistry": ".pmcro/agents/domains.json",
+  "examples": {
+    "ceo": [
+      "reasoning-agent",
+      "governance-agent",
+      "confidentiality-agent",
+      "resource-registry-agent",
+      "economics-agent"
+    ],
+    "cfo": [
+      "reasoning-agent",
+      "filesystem-agent",
+      "economics-agent",
+      "resource-registry-agent"
+    ],
+    "coo": [
+      "filesystem-agent",
+      "powershell-agent",
+      "desktop-commander-agent",
+      "economics-agent",
+      "resource-registry-agent"
+    ],
+    "cto": [
+      "dotnet-agent",
+      "maf-agent",
+      "docker-agent",
+      "github-agent"
+    ],
+    "cmo": [
+      "social-media-agent",
+      "reasoning-agent"
+    ],
+    "chro": [
+      "governance-agent",
+      "reasoning-agent",
+      "confidentiality-agent"
+    ],
+    "ciso": [
+      "governance-agent",
+      "confidentiality-agent",
+      "github-agent",
+      "docker-agent"
+    ],
+    "clo": [
+      "governance-agent",
+      "reasoning-agent",
+      "confidentiality-agent"
+    ]
+  },
+  "checker": {
+    "independent": true,
+    "makerMaySelfApprove": false
+  },
+  "queueContract": ".pmcro/protocol/csuite-queue-contract.json",
+  "productProvenance": ".pmcro/protocol/product-provenance.json"
+}

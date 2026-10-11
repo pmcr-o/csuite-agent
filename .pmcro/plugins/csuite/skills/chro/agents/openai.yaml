@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chief Human Resources Officer"
+  short_description: "Bounded CHRO executive decision agent"
+  default_prompt: "Use $chro only through @csuite-agent /csuite:chro."

@@ -1,0 +1,139 @@
+{
+  "schema": "pmcro.domain-orchestrators/v2",
+  "parent": "csuite-agent",
+  "rule": "Each domain agent is an orchestrator inside its owned capability boundary. C-suite may delegate only to a registered route and explicit grant; domain evidence returns through the queue and is independently checked.",
+  "agents": [
+    {
+      "id": "dotagents-agent",
+      "role": "domain-orchestrator",
+      "skills": 5,
+      "scope": "registered marketplace domain; consult its own catalog before delegation"
+    },
+    {
+      "id": "dotnet-agent",
+      "role": "domain-orchestrator",
+      "skills": 113,
+      "scope": "registered marketplace domain; consult its own catalog before delegation"
+    },
+    {
+      "id": "github-agent",
+      "role": "domain-orchestrator",
+      "skills": 9,
+      "scope": "registered marketplace domain; consult its own catalog before delegation"
+    },
+    {
+      "id": "docker-agent",
+      "role": "domain-orchestrator",
+      "skills": 2,
+      "scope": "registered marketplace domain; consult its own catalog before delegation"
+    },
+    {
+      "id": "powershell-agent",
+      "role": "domain-orchestrator",
+      "skills": 1,
+      "scope": "registered marketplace domain; consult its own catalog before delegation"
+    },
+    {
+      "id": "filesystem-agent",
+      "role": "domain-orchestrator",
+      "skills": 2,
+      "scope": "registered marketplace domain; consult its own catalog before delegation"
+    },
+    {
+      "id": "governance-agent",
+      "role": "domain-orchestrator",
+      "skills": 1,
+      "scope": "registered marketplace domain; consult its own catalog before delegation"
+    },
+    {
+      "id": "desktop-commander-agent",
+      "role": "domain-orchestrator",
+      "skills": 1,
+      "scope": "registered marketplace domain; consult its own catalog before delegation"
+    },
+    {
+      "id": "skill-creator-agent",
+      "role": "domain-orchestrator",
+      "skills": 4,
+      "scope": "registered marketplace domain; consult its own catalog before delegation"
+    },
+    {
+      "id": "reasoning-agent",
+      "role": "domain-orchestrator",
+      "skills": 8,
+      "scope": "registered marketplace domain; consult its own catalog before delegation"
+    },
+    {
+      "id": "maf-agent",
+      "role": "domain-orchestrator",
+      "skills": 3,
+      "scope": "registered marketplace domain; consult its own catalog before delegation"
+    },
+    {
+      "id": "social-media-agent",
+      "role": "domain-orchestrator",
+      "skills": 3,
+      "scope": "registered marketplace domain; consult its own catalog before delegation"
+    },
+    {
+      "id": "git-agent",
+      "role": "domain-orchestrator",
+      "skills": 2,
+      "scope": "registered marketplace domain; consult its own catalog before delegation"
+    },
+    {
+      "id": "python-agent",
+      "role": "domain-orchestrator",
+      "skills": 2,
+      "scope": "registered marketplace domain; consult its own catalog before delegation"
+    },
+    {
+      "id": "aspire-agent",
+      "role": "domain-orchestrator",
+      "skills": 3,
+      "scope": "registered marketplace domain; consult its own catalog before delegation"
+    },
+    {
+      "id": "computer-use-agent",
+      "role": "domain-orchestrator",
+      "skills": 2,
+      "scope": "registered marketplace domain; consult its own catalog before delegation"
+    },
+    {
+      "id": "model-gateway-agent",
+      "role": "domain-orchestrator",
+      "skills": 2,
+      "scope": "registered marketplace domain; consult its own catalog before delegation"
+    },
+    {
+      "id": "eval-agent",
+      "role": "domain-orchestrator",
+      "skills": 3,
+      "scope": "registered marketplace domain; consult its own catalog before delegation"
+    },
+    {
+      "id": "federation-agent",
+      "role": "domain-orchestrator",
+      "skills": 3,
+      "scope": "registered marketplace domain; consult its own catalog before delegation"
+    },
+    {
+      "id": "confidentiality-agent",
+      "role": "domain-orchestrator",
+      "skills": 3,
+      "scope": "registered marketplace domain; consult its own catalog before delegation"
+    },
+    {
+      "id": "resource-registry-agent",
+      "role": "domain-orchestrator",
+      "skills": 4,
+      "scope": "registered marketplace domain; consult its own catalog before delegation"
+    },
+    {
+      "id": "economics-agent",
+      "role": "domain-orchestrator",
+      "skills": 4,
+      "scope": "registered marketplace domain; consult its own catalog before delegation"
+    }
+  ]
+}

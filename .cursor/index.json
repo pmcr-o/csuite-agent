@@ -1,0 +1,112 @@
+{
+  "apiVersion": "pmcro.dev/v1",
+  "kind": "agent.index",
+  "agent": "csuite-agent",
+  "entries": [
+    {
+      "route": "@csuite-agent /csuite:ceo",
+      "plugin": "csuite",
+      "skill": "ceo",
+      "description": "Chief Executive Officer decision support for enterprise direction, strategic priorities, portfolio tradeoffs, and cross-executive alignment. Produces bounded advice and delegation recommendations; it does not silently execute external side effects.",
+      "path": ".pmcro/plugins/csuite/skills/ceo"
+    },
+    {
+      "route": "@csuite-agent /csuite:cfo",
+      "plugin": "csuite",
+      "skill": "cfo",
+      "description": "Chief Financial Officer decision support for financial planning, budgets, unit economics, capital allocation, runway, and financial risk. Produces bounded advice and delegation recommendations; it does not silently execute external side effects.",
+      "path": ".pmcro/plugins/csuite/skills/cfo"
+    },
+    {
+      "route": "@csuite-agent /csuite:chro",
+      "plugin": "csuite",
+      "skill": "chro",
+      "description": "Chief Human Resources Officer decision support for workforce planning, organizational design, talent systems, role clarity, and people operations. Produces bounded advice and delegation recommendations; it does not silently execute external side effects.",
+      "path": ".pmcro/plugins/csuite/skills/chro"
+    },
+    {
+      "route": "@csuite-agent /csuite:ciso",
+      "plugin": "csuite",
+      "skill": "ciso",
+      "description": "Chief Information Security Officer decision support for security posture, cyber risk, access governance, incident readiness, and security controls. Produces bounded advice and delegation recommendations; it does not silently execute external side effects.",
+      "path": ".pmcro/plugins/csuite/skills/ciso"
+    },
+    {
+      "route": "@csuite-agent /csuite:clo",
+      "plugin": "csuite",
+      "skill": "clo",
+      "description": "Chief Legal Officer decision support for legal issue spotting, contract/process risk, compliance coordination, and escalation to qualified counsel. Produces bounded advice and delegation recommendations; it does not silently execute external side effects.",
+      "path": ".pmcro/plugins/csuite/skills/clo"
+    },
+    {
+      "route": "@csuite-agent /csuite:cmo",
+      "plugin": "csuite",
+      "skill": "cmo",
+      "description": "Chief Marketing Officer decision support for market positioning, demand, brand, campaigns, channels, and go-to-market learning. Produces bounded advice and delegation recommendations; it does not silently execute external side effects.",
+      "path": ".pmcro/plugins/csuite/skills/cmo"
+    },
+    {
+      "route": "@csuite-agent /csuite:coo",
+      "plugin": "csuite",
+      "skill": "coo",
+      "description": "Chief Operating Officer decision support for operating cadence, delivery systems, capacity, process health, and cross-functional execution. Produces bounded advice and delegation recommendations; it does not silently execute external side effects.",
+      "path": ".pmcro/plugins/csuite/skills/coo"
+    },
+    {
+      "route": "@csuite-agent /csuite:cto",
+      "plugin": "csuite",
+      "skill": "cto",
+      "description": "Chief Technology Officer decision support for technical strategy, architecture, engineering capability, platform choices, and technology risk. Produces bounded advice and delegation recommendations; it does not silently execute external side effects.",
+      "path": ".pmcro/plugins/csuite/skills/cto"
+    },
+    {
+      "route": "@csuite-agent /csuite:executive-council",
+      "plugin": "csuite",
+      "skill": "executive-council",
+      "description": "Coordinates bounded recommendations from C-suite child agents without erasing dissent, evidence status, or executive scope boundaries.",
+      "path": ".pmcro/plugins/csuite/skills/executive-council"
+    },
+    {
+      "route": "@csuite-agent /pmcro-checker:check",
+      "plugin": "pmcro-checker",
+      "skill": "check",
+      "description": "Check an artifact against acceptance criteria and return one verdict.",
+      "path": ".pmcro/plugins/pmcro-checker/skills/check"
+    },
+    {
+      "route": "@csuite-agent /pmcro-maker:make",
+      "plugin": "pmcro-maker",
+      "skill": "make",
+      "description": "Make one accepted plan inside its declared target. Never issue a verdict.",
+      "path": ".pmcro/plugins/pmcro-maker/skills/make"
+    },
+    {
+      "route": "@csuite-agent /pmcro-orchestrator:orchestrate",
+      "plugin": "pmcro-orchestrator",
+      "skill": "orchestrate",
+      "description": "Accept or deny a seed, then route a bounded cycle through registered plugin capabilities.",
+      "path": ".pmcro/plugins/pmcro-orchestrator/skills/orchestrate"
+    },
+    {
+      "route": "@csuite-agent /pmcro-planner:plan",
+      "plugin": "pmcro-planner",
+      "skill": "plan",
+      "description": "Plan the minimum PMCR-O work from a seed and a plugin. Read-only.",
+      "path": ".pmcro/plugins/pmcro-planner/skills/plan"
+    },
+    {
+      "route": "@csuite-agent /pmcro-reflector:reflect",
+      "plugin": "pmcro-reflector",
+      "skill": "reflect",
+      "description": "Record one earned constraint and one unexecuted next seed.",
+      "path": ".pmcro/plugins/pmcro-reflector/skills/reflect"
+    },
+    {
+      "route": "@csuite-agent /reasoning:intent-refinement",
+      "plugin": "reasoning",
+      "skill": "intent-refinement",
+      "description": "Mandatory Orchestrator-owned refinement of a raw PMCR-O seed into exact-source-grounded validated intent claims after ORCHESTRATE activates and before admission/routing/PLAN.",
+      "path": ".pmcro/plugins/reasoning/skills/intent-refinement"
+    }
+  ]
+}

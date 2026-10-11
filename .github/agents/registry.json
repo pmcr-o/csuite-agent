@@ -1,0 +1,78 @@
+{
+  "schema": "pmcro.child-agents/v1",
+  "parent": "csuite-agent",
+  "agents": [
+    {
+      "id": "ceo-agent",
+      "plugin": "csuite",
+      "skill": "ceo",
+      "scope": "enterprise direction, strategic priorities, portfolio tradeoffs, and cross-executive alignment",
+      "ownsTrail": true,
+      "mayDelegate": true
+    },
+    {
+      "id": "cfo-agent",
+      "plugin": "csuite",
+      "skill": "cfo",
+      "scope": "financial planning, budgets, unit economics, capital allocation, runway, and financial risk",
+      "ownsTrail": true,
+      "mayDelegate": true
+    },
+    {
+      "id": "coo-agent",
+      "plugin": "csuite",
+      "skill": "coo",
+      "scope": "operating cadence, delivery systems, capacity, process health, and cross-functional execution",
+      "ownsTrail": true,
+      "mayDelegate": true
+    },
+    {
+      "id": "cto-agent",
+      "plugin": "csuite",
+      "skill": "cto",
+      "scope": "technical strategy, architecture, engineering capability, platform choices, and technology risk",
+      "ownsTrail": true,
+      "mayDelegate": true
+    },
+    {
+      "id": "cmo-agent",
+      "plugin": "csuite",
+      "skill": "cmo",
+      "scope": "market positioning, demand, brand, campaigns, channels, and go-to-market learning",
+      "ownsTrail": true,
+      "mayDelegate": true
+    },
+    {
+      "id": "chro-agent",
+      "plugin": "csuite",
+      "skill": "chro",
+      "scope": "workforce planning, organizational design, talent systems, role clarity, and people operations",
+      "ownsTrail": true,
+      "mayDelegate": true
+    },
+    {
+      "id": "ciso-agent",
+      "plugin": "csuite",
+      "skill": "ciso",
+      "scope": "security posture, cyber risk, access governance, incident readiness, and security controls",
+      "ownsTrail": true,
+      "mayDelegate": true
+    },
+    {
+      "id": "clo-agent",
+      "plugin": "csuite",
+      "skill": "clo",
+      "scope": "legal issue spotting, contract/process risk, compliance coordination, and escalation to qualified counsel",
+      "ownsTrail": true,
+      "mayDelegate": true
+    },
+    {
+      "id": "executive-council-agent",
+      "plugin": "csuite",
+      "skill": "executive-council",
+      "scope": "cross-executive synthesis",
+      "ownsTrail": true,
+      "mayDelegate": true
+    }
+  ]
+}

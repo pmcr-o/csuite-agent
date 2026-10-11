@@ -1,0 +1,32 @@
+{
+  "apiVersion": "pmcro.dev/v1",
+  "kind": "specialized-agent",
+  "id": "ciso-agent",
+  "parentAgent": "csuite-agent",
+  "plugin": "csuite",
+  "skill": "ciso",
+  "scope": "security posture, cyber risk, access governance, incident readiness, and security controls",
+  "independentSurface": true,
+  "independentChecker": false,
+  "ownsTrail": true,
+  "mayDelegate": true,
+  "mayExecuteExternalSideEffects": false,
+  "input": [
+    "pmcro.message/v1",
+    "payload.executiveAgent",
+    "payload.seed",
+    "trailId",
+    "evidenceStatus"
+  ],
+  "output": [
+    "executive.advice",
+    "executive.decision",
+    "executive.delegation",
+    "executive.escalation",
+    "governance.audit.reference",
+    "outcome.attestation"
+  ],
+  "queue": ".pmcro/queue",
+  "queueTarget": "csuite-agent",
+  "queueSelectionField": "payload.executiveAgent"
+}

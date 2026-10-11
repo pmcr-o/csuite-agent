@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chief Technology Officer"
+  short_description: "Bounded CTO executive decision agent"
+  default_prompt: "Use $cto only through @csuite-agent /csuite:cto."

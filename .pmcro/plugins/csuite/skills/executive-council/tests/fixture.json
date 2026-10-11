@@ -1,0 +1,24 @@
+{
+  "apiVersion": "pmcro.message/v1",
+  "kind": "pmcro.seed",
+  "messageId": "test-executive-council-001",
+  "traceId": "test-executive-council-001",
+  "correlationId": "test-executive-council-001",
+  "parentMessageId": "",
+  "causationId": "",
+  "trailId": "trail:test-parent",
+  "cycleId": "cycle:test",
+  "sourceAgent": "pmcro-agent",
+  "targetAgent": "csuite-agent",
+  "plugin": "csuite",
+  "skill": "executive-council",
+  "createdAt": "2026-10-11T00:00:00.000Z",
+  "availableAt": "2026-10-11T00:00:00.000Z",
+  "expiresAt": "",
+  "evidenceStatus": "NOT-RUN",
+  "grantRefs": [],
+  "payload": {
+    "executiveAgent": "executive-council-agent",
+    "seed": "Evaluate one bounded executive decision."
+  }
+}

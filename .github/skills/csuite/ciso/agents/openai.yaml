@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chief Information Security Officer"
+  short_description: "Bounded CISO executive decision agent"
+  default_prompt: "Use $ciso only through @csuite-agent /csuite:ciso."

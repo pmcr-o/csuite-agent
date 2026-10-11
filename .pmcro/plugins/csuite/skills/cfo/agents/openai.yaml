@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chief Financial Officer"
+  short_description: "Bounded CFO executive decision agent"
+  default_prompt: "Use $cfo only through @csuite-agent /csuite:cfo."

@@ -1,0 +1,42 @@
+{
+  "schema": "pmcro.product-provenance/v1",
+  "productObjects": [
+    "decision",
+    "delegation",
+    "approval",
+    "execution",
+    "outcome",
+    "incident",
+    "audit"
+  ],
+  "rawTrailIsPrimaryUX": false,
+  "rawTrailRole": "append-only/local orchestration provenance and debugging evidence",
+  "governanceAuditRole": "tamper-evident authorization/policy/identity evidence owned by governance provider",
+  "queueRole": "durable causal handoff between agents and domains",
+  "checkerRole": "outcome attestation after execution",
+  "views": {
+    "decisionTimeline": [
+      "executive.decision",
+      "executive.delegation",
+      "governance.audit.reference",
+      "capability.result",
+      "outcome.attestation"
+    ],
+    "auditView": [
+      "governance.audit.reference",
+      "checker.verdict",
+      "outcome.attestation"
+    ],
+    "operationsView": [
+      "capability.invoke",
+      "capability.result",
+      "outcome.attestation"
+    ],
+    "incidentView": [
+      "executive.escalation",
+      "system.halt",
+      "governance.audit.reference",
+      "outcome.attestation"
+    ]
+  }
+}

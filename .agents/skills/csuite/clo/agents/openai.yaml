@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chief Legal Officer"
+  short_description: "Bounded CLO executive decision agent"
+  default_prompt: "Use $clo only through @csuite-agent /csuite:clo."

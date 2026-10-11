@@ -1,0 +1,4 @@
+interface:
+  display_name: "Executive Council"
+  short_description: "Coordinate bounded C-suite recommendations"
+  default_prompt: "Use $executive-council through @csuite-agent /csuite:executive-council."

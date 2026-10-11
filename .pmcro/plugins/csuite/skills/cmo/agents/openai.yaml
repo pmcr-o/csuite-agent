@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chief Marketing Officer"
+  short_description: "Bounded CMO executive decision agent"
+  default_prompt: "Use $cmo only through @csuite-agent /csuite:cmo."

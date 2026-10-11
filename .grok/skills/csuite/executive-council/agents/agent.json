@@ -1,0 +1,40 @@
+{
+  "apiVersion": "pmcro.dev/v1",
+  "kind": "specialized-agent",
+  "id": "executive-council-agent",
+  "parentAgent": "csuite-agent",
+  "plugin": "csuite",
+  "skill": "executive-council",
+  "independentSurface": true,
+  "independentChecker": false,
+  "ownsTrail": true,
+  "mayDelegate": true,
+  "children": [
+    "ceo-agent",
+    "cfo-agent",
+    "coo-agent",
+    "cto-agent",
+    "cmo-agent",
+    "chro-agent",
+    "ciso-agent",
+    "clo-agent"
+  ],
+  "queue": ".pmcro/queue",
+  "queueTarget": "csuite-agent",
+  "queueSelectionField": "payload.executiveAgent",
+  "input": [
+    "pmcro.message/v1",
+    "payload.executiveAgent",
+    "payload.seed",
+    "trailId",
+    "evidenceStatus"
+  ],
+  "output": [
+    "executive.advice",
+    "executive.decision",
+    "executive.delegation",
+    "executive.escalation",
+    "governance.audit.reference",
+    "outcome.attestation"
+  ]
+}

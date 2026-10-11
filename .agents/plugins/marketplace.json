@@ -1,0 +1,46 @@
+{
+  "name": "csuite-agent",
+  "owner": {
+    "name": "pmcr-o"
+  },
+  "metadata": {
+    "description": "C-suite domain orchestrator with bounded executive child agents and cross-domain delegation."
+  },
+  "plugins": [
+    {
+      "name": "csuite",
+      "source": "./.pmcro/plugins/csuite",
+      "description": "csuite capabilities owned by csuite-agent"
+    },
+    {
+      "name": "pmcro-checker",
+      "source": "./.pmcro/plugins/pmcro-checker",
+      "description": "pmcro-checker capabilities owned by csuite-agent"
+    },
+    {
+      "name": "pmcro-maker",
+      "source": "./.pmcro/plugins/pmcro-maker",
+      "description": "pmcro-maker capabilities owned by csuite-agent"
+    },
+    {
+      "name": "pmcro-orchestrator",
+      "source": "./.pmcro/plugins/pmcro-orchestrator",
+      "description": "pmcro-orchestrator capabilities owned by csuite-agent"
+    },
+    {
+      "name": "pmcro-planner",
+      "source": "./.pmcro/plugins/pmcro-planner",
+      "description": "pmcro-planner capabilities owned by csuite-agent"
+    },
+    {
+      "name": "pmcro-reflector",
+      "source": "./.pmcro/plugins/pmcro-reflector",
+      "description": "pmcro-reflector capabilities owned by csuite-agent"
+    },
+    {
+      "name": "reasoning",
+      "source": "./.pmcro/plugins/reasoning",
+      "description": "reasoning capabilities owned by csuite-agent"
+    }
+  ]
+}

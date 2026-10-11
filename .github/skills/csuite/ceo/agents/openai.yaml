@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chief Executive Officer"
+  short_description: "Bounded CEO executive decision agent"
+  default_prompt: "Use $ceo only through @csuite-agent /csuite:ceo."

@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "C-suite queue invocation",
+  "type": "object",
+  "required": [
+    "apiVersion",
+    "kind",
+    "messageId",
+    "sourceAgent",
+    "targetAgent",
+    "trailId",
+    "evidenceStatus",
+    "payload"
+  ],
+  "properties": {
+    "apiVersion": {
+      "const": "pmcro.message/v1"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "messageId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sourceAgent": {
+      "type": "string",
+      "minLength": 1
+    },
+    "targetAgent": {
+      "const": "csuite-agent"
+    },
+    "trailId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidenceStatus": {
+      "enum": [
+        "CONFIRMED",
+        "NOT-YET-VERIFIED",
+        "NOT-RUN"
+      ]
+    },
+    "payload": {
+      "type": "object",
+      "required": [
+        "executiveAgent",
+        "seed"
+      ],
+      "properties": {
+        "executiveAgent": {
+          "type": "string",
+          "minLength": 1
+        },
+        "seed": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

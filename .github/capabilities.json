@@ -1,0 +1,86 @@
+{
+  "schema": "pmcro.capabilities/v1",
+  "agent": "csuite-agent",
+  "executionRule": "registered AND runtime-present AND authorized",
+  "manualParity": {
+    "required": true,
+    "rule": "agent and manual terminal use the same scripts with the same arguments, exit codes, and evidence"
+  },
+  "capabilities": [
+    {
+      "plugin": "csuite",
+      "skill": "ceo",
+      "route": "@csuite-agent /csuite:ceo"
+    },
+    {
+      "plugin": "csuite",
+      "skill": "cfo",
+      "route": "@csuite-agent /csuite:cfo"
+    },
+    {
+      "plugin": "csuite",
+      "skill": "chro",
+      "route": "@csuite-agent /csuite:chro"
+    },
+    {
+      "plugin": "csuite",
+      "skill": "ciso",
+      "route": "@csuite-agent /csuite:ciso"
+    },
+    {
+      "plugin": "csuite",
+      "skill": "clo",
+      "route": "@csuite-agent /csuite:clo"
+    },
+    {
+      "plugin": "csuite",
+      "skill": "cmo",
+      "route": "@csuite-agent /csuite:cmo"
+    },
+    {
+      "plugin": "csuite",
+      "skill": "coo",
+      "route": "@csuite-agent /csuite:coo"
+    },
+    {
+      "plugin": "csuite",
+      "skill": "cto",
+      "route": "@csuite-agent /csuite:cto"
+    },
+    {
+      "plugin": "csuite",
+      "skill": "executive-council",
+      "route": "@csuite-agent /csuite:executive-council"
+    },
+    {
+      "plugin": "pmcro-checker",
+      "skill": "check",
+      "route": "@csuite-agent /pmcro-checker:check"
+    },
+    {
+      "plugin": "pmcro-maker",
+      "skill": "make",
+      "route": "@csuite-agent /pmcro-maker:make"
+    },
+    {
+      "plugin": "pmcro-orchestrator",
+      "skill": "orchestrate",
+      "route": "@csuite-agent /pmcro-orchestrator:orchestrate"
+    },
+    {
+      "plugin": "pmcro-planner",
+      "skill": "plan",
+      "route": "@csuite-agent /pmcro-planner:plan"
+    },
+    {
+      "plugin": "pmcro-reflector",
+      "skill": "reflect",
+      "route": "@csuite-agent /pmcro-reflector:reflect"
+    },
+    {
+      "plugin": "reasoning",
+      "skill": "intent-refinement",
+      "route": "@csuite-agent /reasoning:intent-refinement"
+    }
+  ]
+}

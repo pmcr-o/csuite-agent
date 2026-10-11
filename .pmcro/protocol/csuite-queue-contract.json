@@ -1,0 +1,55 @@
+{
+  "schema": "pmcro.csuite.queue-contract/v1",
+  "principle": "The product displays business objects; the queue/trail/audit layers preserve provenance underneath.",
+  "flow": [
+    "executive.advice",
+    "executive.decision",
+    "executive.delegation",
+    "capability.invoke",
+    "governance.audit.reference",
+    "capability.result",
+    "outcome.attestation",
+    "executive.review"
+  ],
+  "escalation": "executive.escalation",
+  "delegation": {
+    "mustName": [
+      "targetAgent",
+      "plugin",
+      "skill",
+      "grantRefs"
+    ],
+    "externalMutationByExecutive": false,
+    "missingCapability": "skill.create.request",
+    "unresolvedAuthority": "system.halt or executive.escalation"
+  },
+  "governanceEvidence": {
+    "copyAuditLog": false,
+    "messageKind": "governance.audit.reference",
+    "referenceFields": [
+      "provider",
+      "auditRecordId",
+      "evidenceArtefact",
+      "verificationPointers",
+      "policyId",
+      "interventionPoint"
+    ],
+    "note": "AGT or another governance provider remains source of truth for its audit record."
+  },
+  "outcome": {
+    "messageKind": "outcome.attestation",
+    "producer": "independent checker",
+    "states": [
+      "CONFIRMED",
+      "NOT-YET-VERIFIED",
+      "NOT-RUN"
+    ],
+    "links": [
+      "sourceMessageId",
+      "capabilityResultMessageId",
+      "governanceAuditMessageId",
+      "trailRef"
+    ]
+  },
+  "trailOwnership": "local-per-agent; immutable handoff references only"
+}

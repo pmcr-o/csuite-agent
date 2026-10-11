@@ -1,0 +1,83 @@
+{
+  "apiVersion": "pmcro.dev/v1",
+  "kind": "agent.catalog",
+  "id": "csuite-agent",
+  "authority": "read-only discovery; execution requires route + grant + runtime",
+  "skills": [
+    {
+      "id": "ceo",
+      "plugin": "csuite",
+      "description": "Chief Executive Officer decision support for enterprise direction, strategic priorities, portfolio tradeoffs, and cross-executive alignment. Produces bounded advice and delegation recommendations; it does not silently execute external side effects."
+    },
+    {
+      "id": "cfo",
+      "plugin": "csuite",
+      "description": "Chief Financial Officer decision support for financial planning, budgets, unit economics, capital allocation, runway, and financial risk. Produces bounded advice and delegation recommendations; it does not silently execute external side effects."
+    },
+    {
+      "id": "chro",
+      "plugin": "csuite",
+      "description": "Chief Human Resources Officer decision support for workforce planning, organizational design, talent systems, role clarity, and people operations. Produces bounded advice and delegation recommendations; it does not silently execute external side effects."
+    },
+    {
+      "id": "ciso",
+      "plugin": "csuite",
+      "description": "Chief Information Security Officer decision support for security posture, cyber risk, access governance, incident readiness, and security controls. Produces bounded advice and delegation recommendations; it does not silently execute external side effects."
+    },
+    {
+      "id": "clo",
+      "plugin": "csuite",
+      "description": "Chief Legal Officer decision support for legal issue spotting, contract/process risk, compliance coordination, and escalation to qualified counsel. Produces bounded advice and delegation recommendations; it does not silently execute external side effects."
+    },
+    {
+      "id": "cmo",
+      "plugin": "csuite",
+      "description": "Chief Marketing Officer decision support for market positioning, demand, brand, campaigns, channels, and go-to-market learning. Produces bounded advice and delegation recommendations; it does not silently execute external side effects."
+    },
+    {
+      "id": "coo",
+      "plugin": "csuite",
+      "description": "Chief Operating Officer decision support for operating cadence, delivery systems, capacity, process health, and cross-functional execution. Produces bounded advice and delegation recommendations; it does not silently execute external side effects."
+    },
+    {
+      "id": "cto",
+      "plugin": "csuite",
+      "description": "Chief Technology Officer decision support for technical strategy, architecture, engineering capability, platform choices, and technology risk. Produces bounded advice and delegation recommendations; it does not silently execute external side effects."
+    },
+    {
+      "id": "executive-council",
+      "plugin": "csuite",
+      "description": "Coordinates bounded recommendations from C-suite child agents without erasing dissent, evidence status, or executive scope boundaries."
+    },
+    {
+      "id": "check",
+      "plugin": "pmcro-checker",
+      "description": "Check an artifact against acceptance criteria and return one verdict."
+    },
+    {
+      "id": "make",
+      "plugin": "pmcro-maker",
+      "description": "Make one accepted plan inside its declared target. Never issue a verdict."
+    },
+    {
+      "id": "orchestrate",
+      "plugin": "pmcro-orchestrator",
+      "description": "Accept or deny a seed, then route a bounded cycle through registered plugin capabilities."
+    },
+    {
+      "id": "plan",
+      "plugin": "pmcro-planner",
+      "description": "Plan the minimum PMCR-O work from a seed and a plugin. Read-only."
+    },
+    {
+      "id": "reflect",
+      "plugin": "pmcro-reflector",
+      "description": "Record one earned constraint and one unexecuted next seed."
+    },
+    {
+      "id": "intent-refinement",
+      "plugin": "reasoning",
+      "description": "Mandatory Orchestrator-owned refinement of a raw PMCR-O seed into exact-source-grounded validated intent claims after ORCHESTRATE activates and before admission/routing/PLAN."
+    }
+  ]
+}
