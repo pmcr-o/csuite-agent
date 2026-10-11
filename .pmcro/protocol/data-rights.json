@@ -1,0 +1,29 @@
+{
+  "schema": "pmcro.data-rights/v1",
+  "owner": "csuite-agent",
+  "purpose": "Represent governed requests concerning a principal's own data without bypassing provider policy, confidentiality, or legal restrictions.",
+  "requestTypes": ["access", "export", "portability", "correction", "deletion"],
+  "subjectRule": "requester must identify the data subject or an authorized representative relationship",
+  "providerBoundary": {
+    "respectProviderRefusal": true,
+    "recordRefusalAsEvidence": true,
+    "bypassRefusal": false,
+    "credentialDiscovery": false,
+    "hiddenTrainingCorpusExtraction": false,
+    "confidentialCompetitiveDataExtraction": false
+  },
+  "allowedEscalation": [
+    "provider-supported privacy/data-rights workflow",
+    "authorized account export",
+    "documented support or legal process",
+    "internal controller/processor workflow when the organization is responsible for the data"
+  ],
+  "deletionSemantics": {
+    "requestMayBeRecorded": true,
+    "deletionMayBeClaimedCompleteOnlyWithObservedEvidence": true,
+    "providerRetentionExceptionsMustBePreserved": true,
+    "checkerRequired": true
+  },
+  "evidenceStatus": ["NOT-YET-VERIFIED", "CONFIRMED", "DENIED", "COMPLETED"],
+  "authority": "a data-rights request does not itself grant access, deletion, or provider authority"
+}

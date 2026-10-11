@@ -1,0 +1,28 @@
+{
+  "schema": "pmcro.private-runtime-boundary/v1",
+  "owner": "csuite-agent",
+  "purpose": "Allow a privately operated Microsoft Agent Framework runtime to participate in PMCR-O without making its implementation distributable.",
+  "publicSurface": {
+    "mayContain": ["adapter contract", "capability descriptor", "input/output schema", "governance requirements", "evidence format", "runtime health semantics"],
+    "mustNotContain": ["private source tree", "private binaries", "private configuration secrets", "private model weights", "private machine paths", "credential material"]
+  },
+  "privateRuntime": {
+    "runtimeRef": "private://maf-desktop",
+    "technology": "Microsoft Agent Framework",
+    "distribution": "PRIVATE-NON-DISTRIBUTABLE",
+    "registrationRequired": true,
+    "credentialsOwnedExternally": true,
+    "governanceRequired": true,
+    "governanceRoute": "@governance-agent /pmcro-governance:agt-governance",
+    "toolCallsRequireRegisteredCapability": true,
+    "failClosedOnGovernanceError": true
+  },
+  "executionBoundary": {
+    "publicMarketplaceGrantsRuntimeAuthority": false,
+    "runtimeMayWidenGrant": false,
+    "inputMustCarry": ["seedRef", "iContextRef", "authorityCeilingRef", "grantRefs", "completionCriteria"],
+    "outputMustCarry": ["artifactRef", "evidenceRef", "trailRef", "checkerHandoff"],
+    "rawRuntimeOutputIsEvidenceUntilChecked": true
+  },
+  "distributionLaw": "Public PMCR-O distributes the contract; deployment owners supply and register the private runtime separately."
+}

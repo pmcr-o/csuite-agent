@@ -1,0 +1,36 @@
+{
+  "schema": "pmcro.participant-governance/v1",
+  "owner": "csuite-agent",
+  "purpose": "Govern how human, customer, tester, auditor, operator, model, agent, and service principals may contribute evidence without turning evidence into authority.",
+  "governanceRoute": "@governance-agent /pmcro-governance:agt-governance",
+  "autonomy": {
+    "enabled": true,
+    "rootSeedFirstPhase": "ORCHESTRATE",
+    "continueUntil": ["checker-verified-completion", "explicit-HALT", "governance-bound-exhausted"],
+    "questionGate": false,
+    "authorityRule": "inherit-or-narrow-never-widen"
+  },
+  "principals": {
+    "customer": {"mayProduce": ["feedback", "incident", "feature-request", "tenant-approval"], "mayGrantAuthority": false},
+    "tester": {"mayProduce": ["test-result", "regression-result", "release-gate-evidence"], "mayGrantAuthority": false},
+    "auditor": {"mayProduce": ["audit-finding", "control-evidence"], "mayGrantAuthority": false},
+    "operator": {"mayProduce": ["operational-approval", "incident-action-evidence"], "mayGrantAuthority": false, "externalActionRequiresGrant": true},
+    "employee": {"mayProduce": ["proposal", "approval", "business-evidence"], "mayGrantAuthority": false},
+    "model": {"mayProduce": ["proposal", "analysis", "model-result"], "mayGrantAuthority": false, "outputStatus": "NOT-YET-VERIFIED"},
+    "agent": {"mayProduce": ["artifact", "trail-evidence", "checker-handoff"], "mayGrantAuthority": false},
+    "service": {"mayProduce": ["telemetry", "runtime-result", "availability-evidence"], "mayGrantAuthority": false}
+  },
+  "evidenceLaw": {
+    "evidenceIsAuthority": false,
+    "policyMayUseEvidenceToDecideAdmissibility": true,
+    "makerMaySelfApprove": false,
+    "independentCheckerRequiredForPromotion": true,
+    "denialIsEvidence": true,
+    "denialMayBeBypassed": false
+  },
+  "releaseGate": {
+    "blockingTesterFailure": "LOOP-or-HALT-per-policy",
+    "customerComplaintAloneMayDeploy": false,
+    "promotionRequires": ["admissible-grant", "checker-PASS", "governance-ALLOW-or-WARN-with-explicit-policy"]
+  }
+}
